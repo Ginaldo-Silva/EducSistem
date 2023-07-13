@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../styles/loginstyle.css">
+    <script src="../scripts/script.js"></script>
     <title>Login</title>
 </head>
 <body>
     <div class="container">
        <h1>Login</h1>
-       <div>
-        <form action="../data/cadastros.php" method="POST">
-            <div class="form-container">
+        <form action="../data/cadastros.php" method="POST" class="fom-container">
+            <div class="input-container">
                 <label for="iuser">Usuario</label>
                 <input type="text" name="user" id="iuser">
             </div>
-            <div class="form-container">
+            <div class="input-container">
                 <label for="ipass">Senha</label>
-                <input type="password" name="password" id="ipass">
+                <div class="pass-container">
+                    <input type="password" name="password" id="ipass">
+                    <button onclick="togglePasswordVisibility()"></button>
+                </div>
             </div>
         </form>
-       </div>
     </div>
 </body>
 </html>
