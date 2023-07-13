@@ -14,14 +14,15 @@
         <form action="../data/cadastros.php" method="POST" class="fom-container">
             <div class="input-container">
                 <label for="iuser">Usuario</label>
-                <input type="text" name="user" id="iuser">
+                <input type="text" name="user" placeholder="Matricula..." required id="iuser">
             </div>
             <div class="input-container">
                 <label for="ipass">Senha</label>
-                <div class="pass-container">
-                    <input type="password" name="password" id="ipass">
-                    <button onclick="togglePasswordVisibility()"></button>
-                </div>
+                <input type="password" placeholder="Senha..." required name="password" id="ipass">
+            </div>
+            <div class="btn-container">
+                <button onclick="togglePasswordVisibility()"></button>
+                <input type="submit" value="Entrar">
             </div>
         </form>
     </div>
