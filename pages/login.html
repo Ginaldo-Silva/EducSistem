@@ -11,14 +11,14 @@
 <body>
     <div class="container">
        <h1>Login</h1>
-        <form action="../data/cadastros.php" method="POST" class="fom-container">
+        <form action="../data/cadastros.php" method="get" class="fom-container">
             <div class="input-container">
                 <label for="iuser">Usuario</label>
-                <input type="text" name="user" placeholder="Matricula..." required id="iuser">
+                <input type="text" name="user" required id="iuser">
             </div>
             <div class="input-container">
                 <label for="ipass">Senha</label>
-                <input type="password" placeholder="Senha..." required name="password" id="ipass">
+                <input type="password" required name="password" id="ipass">
             </div>
             <div class="btn-container">
                 <button onclick="togglePasswordVisibility()"></button>
