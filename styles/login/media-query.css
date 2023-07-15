@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --font01: Arial, Helvetica, sans-serif;
+    --font02: 'Ubuntu', sans-serif;
+    --font03: 'Roboto',sans-serif;
+
+    --color01: #40BDDB;
+    --color02: #2f97b1;
+    --color03: #0C4F87;
+    --color04: #07355b;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    
+}

@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../styles/loginstyle.css">
-    <script src="../scripts/script.js"></script>
     <title>Login</title>
+
+    <link rel="stylesheet" href="../styles/login/style.css">
+    <link rel="stylesheet" href="../styles/login/media-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="container">
-       <h1>Login</h1>
-        <form action="../data/cadastros.php" method="get" class="fom-container">
-            <div class="input-container">
-                <label for="iuser">Usuario</label>
-                <input type="text" name="user" required id="iuser">
-            </div>
-            <div class="input-container">
-                <label for="ipass">Senha</label>
-                <input type="password" required name="password" id="ipass">
-            </div>
-            <div class="btn-container">
-                <button onclick="togglePasswordVisibility()"></button>
+    <main>
+        <h1>Login</h1>
+        <form action="." method="post">
+            <div class="form-container">
+                <div id="input-container">
+                    <div id="label-container">
+                        <label for="iuser">
+                            <span class="material-symbols-outlined">person</span>
+                            Matricula
+                        </label>
+                    </div>
+                    <input type="text" name="user" id="iuser" required>
+                </div>
+                <div id="input-container">
+                    <div id="label-container">
+                        
+                        <label for="ipass">
+                            <span class="material-symbols-outlined">password</span>
+                            Senha
+                        </label>
+                    </div>
+                    <input type="password" name="password" id="ipass" required>
+                </div>
                 <input type="submit" value="Entrar">
             </div>
         </form>
-    </div>
+    </main>
 </body>
 </html>
