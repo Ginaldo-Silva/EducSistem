@@ -12,21 +12,21 @@
 </head>
 <body>
     <main>
-        <div class="base-container">
+        <div class="container">
             <h1>Login</h1>
-            <form action="login.php" method="post" autocomplete="on">
-                <div class="container">
+            <div class="form-container">
+                <form action="login.php" method="post" autocomplete="on">
                     <div id="input-container">
-                        <label for="iplate"><span class="material-symbols-outlined">person</span>Matricula</label></label>
-                        <input type="text" name="plate" id="iplate" required>
+                        <label for="iplate"><span class="material-symbols-outlined">person</span>Matricula</label>
+                        <input type="text" name="plate" id="iplate">
                     </div>
                     <div id="input-container">
                         <label for="ipass"><span class="material-symbols-outlined">password</span>Senha</label>
-                        <input type="password" name="password" id="ipass" autocomplete="current-password" required>
+                        <input type="text" name="password" id="pass">
                     </div>
                     <input type="button" value="Entrar" id="ienter">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </main>
 </body>
