@@ -18,7 +18,15 @@
     --color07: #C1FF1C;
 }
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (min-width:768px) and (max-width:992px) and (orientation: portrait) {
+    .container {
+        background: black url(../img/login-background.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) and (orientation: landscape) {
+    
 }
 
 @media screen and (min-width:992px) {
