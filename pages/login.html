@@ -13,18 +13,25 @@
 <body>
     <main>
         <div class="container">
-            <h1>Login</h1>
+            <div class="text-container">
+                <h1>Login</h1>
+            </div>
             <div class="form-container">
-                <form action="login.php" method="post" autocomplete="on">
-                    <div id="input-container">
-                        <label for="iplate"><span class="material-symbols-outlined">person</span>Matricula</label>
-                        <input type="text" name="plate" id="iplate" placeholder="Digite sua matricula..." required>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <div id="inputs">
+                        <label for="iplate">
+                            <span class="material-symbols-outlined">person</span>Matricula</label>
+                        <input type="text" name="plate" id="iplate" required>
                     </div>
-                    <div id="input-container">
-                        <label for="ipass"><span class="material-symbols-outlined">password</span>Senha</label>
-                        <input type="password" name="password" id="ipass" placeholder="Digite sua senha..." required>
+                    <div id="inputs">
+                        <label for="ipass">
+                            <span class="material-symbols-outlined">password</span>Senha</label>
+                            <input type="text" name="plate" id="ipass" autocomplete="current-password" required>
                     </div>
-                    <input type="submit" value="Entrar" id="ienter">
+                    <div id="buttons">
+                        <input type="button" value="Show">
+                        <input type="submit" value="Entrar">
+                    </div>
                 </form>
             </div>
         </div>
