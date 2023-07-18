@@ -9,14 +9,11 @@
     --font02: 'Ubuntu', sans-serif;
     --font03: 'Roboto',sans-serif;
 
-    --cor01: #035A53;
-    --cor02: #BDF906;
-    --cor03: #1E8C45;
-    --cor04: #0eca4c;
-    --cor05: #9BE931;
-    --cor06: #C1FF1C;
-    --cor07: #D8E267;
-    --cor08: #FCFAEF;
+    --cor01: #006AD7;
+    --cor02: #9AD9EA;
+    --cor03: #21277B;
+    --cor04: #5F83B1;
+    --cor05: #FCFAEF;
 }
 
 * {
@@ -37,8 +34,8 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70vw;
-    height: 210px;
-    border: 2px solid var(--cor04);
+    height: 245px;
+    border: 2px solid var(--cor03);
     border-radius: 10px;
 }
 
@@ -46,8 +43,7 @@ html, body {
     text-align: center;
     font-size: 2.3em;
     padding-top: 10px;
-    padding-bottom: 10px;
-    color: var(--cor04);
+    color: var(--cor03);
     text-shadow: 0px 0px 1px black;
 }
 
@@ -63,27 +59,31 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    padding-top: 10px;
 }
 
 .form-container div#inputs label {
-    color: var(--cor04);
+    color: var(--cor03);
+}
+
+.form-container div#inputs label > span {
+    margin-right: 10px;
 }
 
 .form-container div#inputs > input {
     width: 100%;
     height: 0px;
     border: none;
-    border-bottom: 1px solid var(--cor04);
+    border-bottom: 1px solid var(--cor03);
 
     transition: all 0.2s ease;
 }
 
-.form-container div#inputs > input:hover,
 .form-container div#inputs > input:focus,
 .form-container div#inputs > input:valid {
     width: 100%;
     height: 30px;
-    border: 1px solid var(--cor04);
+    border: 1px solid var(--cor03);
     border-radius: 5px;
 
     transition: all 0.2s ease;
@@ -92,14 +92,23 @@ html, body {
 .form-container div#buttons {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    height: 30px;
+    padding-top: 10px;
+    height: 35px;
+    
  }
 
+.form-container div#buttons > input {
+    font: normal 1.1em var(--font01);
+    background-image: linear-gradient(0deg,var(--cor01), var(--cor02));
+    color: white;
+    border: 1px solid var(--cor03);
+    border-radius: 5px;
+}
+
  .form-container div#buttons input[type='button'] {
-    width: 50px;
+    width: 55px;
  }
 
  .form-container div#buttons input[type='submit'] {
-    width: 125px;
+    width: 120px;
  }

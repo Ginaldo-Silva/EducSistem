@@ -54,7 +54,6 @@
         width: 110%;
     }
 
-    .form-container div#inputs > input:hover,
     .form-container div#inputs > input:focus,
     .form-container div#inputs > input:valid {
         width: 110%;
@@ -66,5 +65,47 @@
 }
 
 @media screen and (min-width:992px) {
+    .container {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 50vw;
+        height: 300px;
+    }
 
+    .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black url(../img/login-background.jpg) no-repeat;
+        background-size: cover;
+        background-position: top center;
+        width: 45%;
+        height: 100%;
+    }
+
+    .text-container > h1 {
+        font-size: 4em;
+    }
+
+    .form-container {
+        width: 55%;
+    }
+
+    .form-container div#inputs label {
+        font-size: 1.5em;
+    }
+
+    .form-container div#inputs input {
+        width: 110%;
+    }
+
+    .form-container div#inputs > input:focus,
+    .form-container div#inputs > input:valid {
+        width: 110%;
+        height: 35px;
+        font-size: 1.2em;
+        border: 1px solid var(--cor04);
+        border-radius: 5px;
+    }
 }

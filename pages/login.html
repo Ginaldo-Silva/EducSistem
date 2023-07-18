@@ -26,15 +26,29 @@
                     <div id="inputs">
                         <label for="ipass">
                             <span class="material-symbols-outlined">password</span>Senha</label>
-                            <input type="text" name="plate" id="ipass" autocomplete="current-password" required>
+                            <input type="password" name="password" id="ipass" autocomplete="current-password" required>
                     </div>
                     <div id="buttons">
-                        <input type="button" value="Show">
+                        <input type="button" value="Show" id="togglePassButton" onclick="togglePasswordVisibility()">
                         <input type="submit" value="Entrar">
                     </div>
                 </form>
             </div>
         </div>
     </main>
+    <script>
+        function togglePasswordVisibility() {
+            var passInput = document.getElementById('ipass');
+            var passToggleButton = document.getElementById('togglePassButton');
+
+            if(passInput.type === 'password') {
+                passInput.type = 'text';
+                passToggleButton.value = 'Hide';
+            } else {
+                passInput.type = 'password';
+                passToggleButton.value = 'Show';
+            }
+        }
+    </script>
 </body>
 </html>
