@@ -125,7 +125,7 @@ div#form-rigth a:hover {
 div#form-rigth input[type="submit"] {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-top: 10px;
     border: 1px solid var(--cor01);
     border-radius: 10px;
@@ -135,6 +135,7 @@ div#form-rigth input[type="submit"] {
     height: 35px;
     overflow: hidden;
     font: bold 1.2em var(--font01);
+    background-color: white;
     
 }
 
