@@ -13,25 +13,29 @@
 <body>
     <main>
         <div id="container">
-            <div id="form-left">
-                <h1>Login</h1>
-            </div>
+            <div id="form-left"></div>
             <div id="form-rigth">
+                <h1>Login</h1>
                 <form action="cadastro.php" method="post" autocomplete="on">
                     <div class="input-container">
                         <label for="imatricula">
                             <div id="mselector"></div>
-                            <input type="text" name="matricula" id="imatricula" onfocus="settyping('m')" onblur="setNoTyping('m')" required>
+                            <input type="text" name="matricula" id="imatricula" placeholder="Matricula" onfocus="settyping('m')" onblur="setNoTyping('m')" required>
                             <span class="material-symbols-outlined">person</span>
                         </label>
                     </div>
                     <div class="input-container">
-                        <label for="ipasssword">
+                        <label for="ipassword">
                             <div id="sselector"></div>
-                            <input type="text" name="matricula" id="ipassword" onfocus="settyping('s')" onblur="setNoTyping('s')" required>
+                            <input type="password" name="senha" id="ipassword" placeholder="Senha" onfocus="settyping('s')" onblur="setNoTyping('s')" required>
                             <span class="material-symbols-outlined">password</span>
                         </label>
                     </div>
+                    <div class="options">
+                        <a href="#">Esqueceu a senha?</a>
+                        <input type="button" value="Hide" id="togglePassButton" onclick="togglePasswordVisibility()">
+                    </div>
+                    
                     <input type="submit" value="Entrar">
                 </form>
             </div>
@@ -39,7 +43,7 @@
     </main>
     <script>
         function togglePasswordVisibility() {
-            var passInput = document.getElementById('ipass');
+            var passInput = document.getElementById('ipassword');
             var passToggleButton = document.getElementById('togglePassButton');
 
             if(passInput.type === 'password') {
@@ -57,10 +61,10 @@
 
             switch (set) {
                 case 's':
-                    sselector.style.background = '#FFB266';
+                    sselector.style.background = '#006AD7';
                     break;
                 case 'm':
-                    mselector.style.background = '#FFB266';
+                    mselector.style.background = '#006AD7';
                 default:
                     break;
             }

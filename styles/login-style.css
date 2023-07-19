@@ -13,11 +13,12 @@
     --cor02: #9AD9EA;
     --cor03: #21277B;
     --cor04: #5F83B1;
-    --cor04-1: #81ace4;
     --cor05: #FCFAEF;
 
     --background01: #263850;
+    --background02Transparent: #26385062;
     --background02: #5173a0;
+    --background02Transparent: #5173a073;
 }
 
 * {
@@ -37,32 +38,37 @@ div#container {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:   var(--background01);
+    border: 1px solid black;
+    overflow: hidden;
     border-radius: 10px;
     width: 75vw;
     height: 300px;
 }
 
-div#form-left > h1 {
-    font: bold 2.2em var(--font01);
-    padding-top: 10px;
-    margin-bottom: 15px;
-    color: white;
-    text-align: center;
-}
-
 div#form-rigth {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    overflow:visible;
+}
+
+div#form-rigth > h1 {
+    font: bold 2.5em var(--font01);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.575);
+    padding-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    color: var(--cor01);
+    text-align: center;
 }
 
 .input-container {
     display: flex;
-    justify-content: center;
     margin: auto;
     width: 225px;
     height: 40px;
-    background-color: var(--background02);
+    border: 1px solid var(--background01);
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -80,30 +86,56 @@ div#mselector, div#sselector {
 }
 
 .input-container input {
-    font: normal 1.5em var(--font01);
+    font: normal 1.3em var(--font01);
     height: 100%;
     width: 72%;
     border: none;
-    background-color: transparent;
-    color: white;
 }
 
 .input-container input:focus {
     outline: none;
 }
 
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options > input {
+    font: bold .9em var(--font01);
+    border: 1px solid var(--cor03);
+    border-radius: 5px;
+    background-color: var(--cor01);
+    color: white;
+    width: 50px;
+    height: 30px;
+}
+
+.options > a {
+    color: var(--cor01);
+    font: italic 0.8em var(--font01);
+    text-decoration: none;
+}
+
+div#form-rigth a:hover {
+    text-decoration: underline;
+}
+
 div#form-rigth input[type="submit"] {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-top: 10px;
+    border: 1px solid var(--cor01);
     border-radius: 10px;
-    border: none;
     color: var(--cor01);
     position: relative;
     width: 100%;
-    height: 30px;
+    height: 35px;
     overflow: hidden;
     font: bold 1.2em var(--font01);
+    
 }
 
 .input-container span {
@@ -112,5 +144,5 @@ div#form-rigth input[type="submit"] {
     text-align: center;
     padding-top: 10px;
     font-size: 2em;
-    color: white;
+    color: var(--cor01);
 }

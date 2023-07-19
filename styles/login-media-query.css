@@ -14,12 +14,62 @@
     --cor03: #21277B;
     --cor04: #5F83B1;
     --cor05: #FCFAEF;
+
+    --background01: #263850;
+    --background02Transparent: #26385062;
+    --background02: #5173a0;
+    --background02Transparent: #5173a073;
 }
 
 @media screen and (min-width:768px) and (max-width:992px) {
-   
+    div#container {
+        display: flex;
+        align-items: center;
+    }
+
+    div#form-left {
+        display: flex;
+        justify-content: center;
+        float: left;     
+        width: 50%;  
+        height: 100%;
+        background: var(--cor01) url(../img/login-background.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    div#form-left h1 {
+        padding-top: 50px;
+    }
+
+    div#form-rigth {
+        float: right;      
+        width: 50%;
+    }
 }
 
 @media screen and (min-width:992px) {
-    
+    div#container {
+        width: 750px;
+        display: flex;
+        align-items: center;
+    }
+
+    div#form-left {
+        display: flex;
+        justify-content: center;
+        float: left;     
+        width: 50%;  
+        height: 100%;
+        background: var(--cor01) url(../img/login-background.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    div#form-left h1 {
+        padding-top: 50px;
+    }
+
+    div#form-rigth {
+        float: right;      
+        width: 50%;
+    }
 }
