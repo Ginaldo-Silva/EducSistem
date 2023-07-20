@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --font01: Arial, Helvetica, sans-serif;
+    --font02: 'Ubuntu', sans-serif;
+    --font03: 'Roboto',sans-serif;
+
+    --cor01: #006AD7;
+    --cor02: #9AD9EA;
+    --cor03: #21277B;
+    --cor04: #5F83B1;
+    --cor05: #FCFAEF;
+
+    --background01: #263850;
+    --background02Transparent: #26385062;
+    --background02: #5173a0;
+    --background02Transparent: #5173a073;
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    header {
+        height: 60px;
+    }
+
+    div#top-section section {
+        height: 250px;
+    }
+
+    div#perfil-img {
+        height: 215px;
+    }
+
+    section#section-rigth {
+        margin-top: 25px;
+    }
+
+    section#section-rigth a, p {
+        font-size: 1.5em;
+    }
+
+    section#bottom-secton h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    div#mobile-icons {
+        display: none;
+    }
+
+    div#desktop-icons {
+        display: flex;
+    }
+
+    main {
+        display: flex;
+        margin: auto;
+        width: 70%;
+        height: 90%;
+        border: 1px solid black;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    }
+
+    div#perfil-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    section#top-section {
+        display: flex;
+        width: 100%;
+    }
+
+    section#section-left {
+        width: 35%;
+    }
+
+    section#bottom-section {
+        width: 100%;
+    }
+
+    section#bottom-secton div#formacoes,
+section#bottom-secton div#biogra,
+section#bottom-secton div#disciplinas {
+    width: 90%;
+}
+}
