@@ -26,6 +26,18 @@
         height: 60px;
     }
 
+    div#mobile-icons {
+        display: flex;
+    }
+
+    div#menu-icons {
+        display: flex;
+    }
+
+    div#desktop-menu {
+        display: none;
+    }
+
     div#top-section section {
         height: 250px;
     }
@@ -49,23 +61,57 @@
 
 @media screen and (min-width:992px) {
 
+    header {
+        height: 50px;
+    }
+
+    div#desktop-menu {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
     div#mobile-icons {
         display: none;
     }
 
-    div#desktop-icons {
+    div#perfil-min-container {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        height: 100%;
     }
 
+    div#perfil-min-container p {
+        font: bold 1.2em var(--font02);
+        color: white;
+    }
+
+    div#min-perfil-img {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        margin: 5px;
+    }
+    
     main {
         display: flex;
         margin: auto;
-        width: 70%;
+        width: 50%;
         height: 90%;
         border: 1px solid black;
+        border-top: none;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    }
+
+    div#top-section {
+        width: 100%;
     }
 
     div#perfil-container {
@@ -79,17 +125,33 @@
         width: 100%;
     }
 
+    div#top-section section {
+        height: 250px;
+    }
+
     section#section-left {
         width: 35%;
+    }
+
+    div#perfil-img {
+        height: 200px;
+    }
+
+    section#section-rigth {
+        margin-top: 30px;
+    }
+
+    section#section-rigth a, p {
+        font-size: 1.5em;
     }
 
     section#bottom-section {
         width: 100%;
     }
 
-    section#bottom-secton div#formacoes,
-section#bottom-secton div#biogra,
-section#bottom-secton div#disciplinas {
+    div#formacoes,
+    div#biogra,
+    div#disciplinas {
     width: 90%;
-}
+    }  
 }

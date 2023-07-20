@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,22 @@
 <body>
     <header>
         <div id="mobile-icons">
-            <span class="material-symbols-outlined">arrow_back_ios</span>
+            <button id="back-button"><span class="material-symbols-outlined">arrow_back_ios</span></button>
             <h1>Perfil</h1>
-            <span class="material-symbols-outlined">menu</span>
+            <button id="menu-button" onclick="ShowMobileMenu()"><span class="material-symbols-outlined" id="menu-icon">menu</span></button>
         </div>
         <div id="desktop-menu">
-            
+            <div id="perfil-min-container">
+                <div id="min-perfil-img"></div>
+                <p>User Name</p>
+            </div>
+        </div>
+        <div id="mobile-menu">
+            <ul>
+                <li class="menu-iten"><a href="#" class="menu-link">Inicio</a></li>
+                <li class="menu-iten"><a href="#" class="menu-link">Perfil</a></li>
+                <li class="menu-iten"><a href="#" class="menu-link">Educador</a></li>
+            </ul>
         </div>
     </header>
     <main>
@@ -30,6 +40,7 @@
                     <a href="#">Perfil Name</a>
                     <p>Idade</p>
                     <a href="#">Instagram</a>
+                    <p>Whatsapp</p>
                 </section>
             </div>
             <section id="bottom-section">
@@ -48,5 +59,22 @@
             </section>
         </div>
     </main>
+    <script>
+        function ShowMobileMenu() {
+            let menubtn = document.getElementById('menu-button')
+            let menuicon = document.getElementById('menu-icon')
+            let menu = document.getElementById('mobile-menu')
+
+            if(menu.style.display === 'block') {
+                menu.style.display = 'none'
+                menuicon.innerHTML = 'menu'
+                
+                
+            } else {
+                menu.style.display = 'block'
+                menuicon.innerHTML = 'Close'
+            }
+        }
+    </script>
 </body>
 </html>
