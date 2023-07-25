@@ -13,78 +13,52 @@
 <body>
     <main>
         <div id="container">
-            <div id="form-left"></div>
-            <div id="form-rigth">
-                <h1>Login</h1>
-                <form action="cadastro.php" method="post" autocomplete="on">
+            <form action="../data/cadastros.php" autocomplete="on">
+                <section id="left"></section>
+                <section id="rigth">
+                    <h1>Login</h1>
                     <div class="input-container">
-                        <label for="imatricula">
-                            <div id="mselector"></div>
-                            <input type="text" name="matricula" id="imatricula" placeholder="Matricula" onfocus="settyping('m')" onblur="setNoTyping('m')" required>
+                        <label for="iplate">
+                            <span class="plate-select"></span>
+                            <input type="text" name="plate" id="iplate" placeholder="UF+Matricula" required>
                             <span class="material-symbols-outlined">person</span>
                         </label>
                     </div>
                     <div class="input-container">
-                        <label for="ipassword">
-                            <div id="sselector"></div>
-                            <input type="password" name="senha" id="ipassword" placeholder="Senha" onfocus="settyping('s')" onblur="setNoTyping('s')" required>
+                        <label for="ipass">
+                            <span class="pass-select"></span>
+                            <input type="password" name="password" id="ipass" placeholder="Senha" autocomplete="current-password" required>
                             <span class="material-symbols-outlined">password</span>
                         </label>
                     </div>
-                    <div class="options">
-                        <a href="#">Esqueceu a senha?</a>
-                        <input type="button" value="Hide" id="togglePassButton" onclick="togglePasswordVisibility()">
-                    </div>
-                    
-                    <input type="submit" value="Entrar">
-                </form>
-            </div>
+                    <input type="submit" value="Entrar" id="submit">
+                </section>
+            </form>
         </div>
     </main>
     <script>
-        function togglePasswordVisibility() {
-            var passInput = document.getElementById('ipassword');
-            var passToggleButton = document.getElementById('togglePassButton');
+        const plateinput = document.getElementById('iplate')
+        const passinput = document.getElementById('ipass')
 
-            if(passInput.type === 'password') {
-                passInput.type = 'text';
-                passToggleButton.value = 'Hide';
-            } else {
-                passInput.type = 'password';
-                passToggleButton.value = 'Show';
-            }
-        }
+        plateinput.addEventListener('focus', function isTyping() {
+            platespan = document.querySelector('span.plate-select')
+            platespan.style.background = '#006AD7'
+        })
 
-        function settyping (set){
-            var mselector = document.getElementById('mselector');
-            var sselector = document.getElementById('sselector');
+        plateinput.addEventListener('blur', function noTyping() {
+            platespan = document.querySelector('span.plate-select')
+            platespan.style.background = 'transparent'
+        })
 
-            switch (set) {
-                case 's':
-                    sselector.style.background = '#006AD7';
-                    break;
-                case 'm':
-                    mselector.style.background = '#006AD7';
-                default:
-                    break;
-            }
+        passinput.addEventListener('focus', function isTyping() {
+            passspan = document.querySelector('span.pass-select')
+            passspan.style.background = '#006AD7'
+        })
 
-        }
-
-        function setNoTyping (set) {
-            var mselector = document.getElementById('mselector');
-            var sselector = document.getElementById('sselector');
-
-            switch (set) {
-                case 's':
-                    sselector.style.background = 'transparent';
-                    break;
-                case 'm':
-                    mselector.style.background = 'transparent';
-                default:
-                    break;
-            }
-        }
+        passinput.addEventListener('blur', function noTyping() {
+            passspan = document.querySelector('span.pass-select')
+            passspan.style.background = 'transparent'
+        })
     </script>
 </body>
 </html>

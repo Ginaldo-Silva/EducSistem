@@ -14,6 +14,7 @@
     --cor03: #21277B;
     --cor04: #5F83B1;
     --cor05: #FCFAEF;
+    --cor06: #13213C;
 
     --background01: #263850;
     --background02Transparent: #26385062;
@@ -33,117 +34,82 @@ html, body {
     height: 100vh;
 }
 
-div#container {
+#container {
     position: absolute;
+    display: flex;
+    justify-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid black;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 75vw;
     height: 300px;
+    width: 80%;
+    max-width: 400px;
 }
 
-div#form-rigth {
+form {
+    width: 100%;
+}
+
+#rigth {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow:visible;
 }
 
-div#form-rigth > h1 {
-    font: bold 2.5em var(--font01);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.575);
-    padding-top: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+#rigth h1 {
     color: var(--cor01);
-    text-align: center;
+    font: bold 2em var(--font02);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
 }
 
 .input-container {
-    display: flex;
-    margin: auto;
-    width: 225px;
-    height: 40px;
-    border: 1px solid var(--background01);
-    border-radius: 10px;
+    border: 1px solid var(--cor06);
+    height: 35px;
+    width: 70%;
     overflow: hidden;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .input-container label {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
-   
-div#mselector, div#sselector {
+
+label span.plate-select,
+label span.pass-select {
     height: 100%;
     width: 3%;
+    background-color: transparent;
 }
 
-.input-container input {
-    font: normal 1.3em var(--font01);
-    height: 100%;
-    width: 72%;
+label input {
+    width: 83%;
+    height: 95%;
     border: none;
+    font-size: 1.1em;
+    padding-left: 1px;
 }
 
-.input-container input:focus {
+label input:focus {
     outline: none;
 }
 
-.options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.options > input {
-    font: bold .9em var(--font01);
-    border: 1px solid var(--cor03);
-    border-radius: 5px;
-    background-color: var(--cor01);
-    color: white;
-    width: 50px;
-    height: 30px;
-}
-
-.options > a {
+label span.material-symbols-outlined {
     color: var(--cor01);
-    font: italic 0.8em var(--font01);
-    text-decoration: none;
+    width: 15%;
 }
 
-div#form-rigth a:hover {
-    text-decoration: underline;
-}
-
-div#form-rigth input[type="submit"] {
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    border: 1px solid var(--cor01);
-    border-radius: 10px;
-    color: var(--cor01);
-    position: relative;
-    width: 100%;
+#submit {
+    width: 65%;
     height: 35px;
-    overflow: hidden;
-    font: bold 1.2em var(--font01);
-    background-color: white;
-    
-}
-
-.input-container span {
-    height: 100%;
-    width: 20%;
-    text-align: center;
-    padding-top: 10px;
-    font-size: 2em;
+    border: 1px solid var(--cor06);
     color: var(--cor01);
+    background-color: transparent;
+    border-radius: 10px;
+    font: bold 1.2em var(--font02);
 }
