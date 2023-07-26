@@ -15,11 +15,6 @@
     --cor04: #5F83B1;
     --cor05: #FCFAEF;
     --cor06: #13213C;
-
-    --background01: #263850;
-    --background02Transparent: #26385062;
-    --background02: #5173a0;
-    --background02Transparent: #5173a073;
 }
 
 * {
@@ -46,17 +41,17 @@ html, body {
     max-width: 400px;
 }
 
-form {
+#right {
     width: 100%;
 }
 
-#rigth {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#rigth h1 {
+#right h1 {
     color: var(--cor01);
     font: bold 2em var(--font02);
     padding-top: 10px;
@@ -92,7 +87,7 @@ label input {
     height: 95%;
     border: none;
     font-size: 1.1em;
-    padding-left: 1px;
+    padding-left: 5px;
 }
 
 label input:focus {
